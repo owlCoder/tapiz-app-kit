@@ -1,0 +1,38 @@
+{
+  "name": "@tapizlabs/app-kit",
+  "version": "0.1.0",
+  "type": "module",
+  "private": false,
+  "description": "Framework-agnostic app infra shared across Tapiz products (ActionResult, MySQL/Aiven pool config).",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./db": {
+      "types": "./dist/db/index.d.ts",
+      "import": "./dist/db/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "README.md", "package.json"],
+  "scripts": {
+    "build": "npm run clean && tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "clean": "node scripts/clean.mjs",
+    "dev:watch": "tsc -p tsconfig.json --watch --preserveWatchOutput",
+    "prepack": "npm run build",
+    "release:patch": "npm version patch",
+    "publish:public": "npm publish --access public"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "5.9.3"
+  },
+  "license": "MIT",
+  "sideEffects": false,
+  "publishConfig": { "access": "public" },
+  "keywords": ["tapiz", "app-kit", "action-result", "mysql", "aiven"]
+}
