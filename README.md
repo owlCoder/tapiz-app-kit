@@ -47,7 +47,11 @@ const pool = mysql.createPool(buildMysqlPoolOptions(process.env));
 `@tapizlabs/app-kit` (how the spoke runs) + `@tapizlabs/sdk` (LMS API client).
 **Do not add a 4th** — anything else risks becoming a junk drawer.
 
-## Consuming
+## Install
 
-Not published to npm (yet). Build (`npm run build`) and copy `dist/` + `package.json`
-into the consumer's `node_modules/@tapizlabs/app-kit/`.
+```bash
+npm install @tapizlabs/app-kit
+```
+
+ESM only. The root entry is zero-dependency; `/db` is Node-only and expects the
+consumer to provide `mysql2`.
