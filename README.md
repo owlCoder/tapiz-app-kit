@@ -1,5 +1,10 @@
 # @tapizlabs/app-kit
 
+[![npm version](https://img.shields.io/npm/v/@tapizlabs/app-kit.svg)](https://www.npmjs.com/package/@tapizlabs/app-kit)
+[![CI](https://github.com/owlCoder/tapiz-app-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/owlCoder/tapiz-app-kit/actions/workflows/ci.yml)
+[![license](https://img.shields.io/npm/l/@tapizlabs/app-kit.svg)](./LICENSE)
+[![types](https://img.shields.io/npm/types/@tapizlabs/app-kit.svg)](https://www.npmjs.com/package/@tapizlabs/app-kit)
+
 Framework-agnostic application infrastructure shared across Tapiz spoke products.
 
 "How a spoke technically works" — the plumbing every product duplicates, with no tie
