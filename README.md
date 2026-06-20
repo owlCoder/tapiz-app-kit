@@ -44,13 +44,6 @@ const pool = mysql.createPool(buildMysqlPoolOptions(process.env));
 - Defaults `connectionLimit` to **1** (Vercel serverless + Aiven free tier: each warm
   lambda holds its own pool, so N×limit easily exceeds `max_connections`). Override via
   `DATABASE_POOL_LIMIT`.
-- When `DATABASE_SSL_CA_BASE64` is set, enables strict TLS with the decoded Aiven CA.
-
-## Three-package discipline
-
-`@tapizlabs/ui` (design) · `@tapizlabs/identity` (who-you-are / what-you-may) ·
-`@tapizlabs/app-kit` (how the spoke runs) + `@tapizlabs/sdk` (LMS API client).
-**Do not add a 4th** — anything else risks becoming a junk drawer.
 
 ## Install
 
