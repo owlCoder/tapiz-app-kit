@@ -1,6 +1,6 @@
 {
   "name": "@tapizlabs/app-kit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "private": false,
   "description": "Framework-agnostic app infra shared across Tapiz products (ActionResult, MySQL/Aiven pool config).",
